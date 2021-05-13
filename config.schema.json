@@ -1,7 +1,6 @@
 {
-  "pluginAlias": "ExampleHomebridgePlugin",
-  "pluginType": "platform",
-  "singular": true,
+  "pluginAlias": "ARCAM-AVR300-RS232",
+  "pluginType": "accessory",
   "schema": {
     "type": "object",
     "properties": {
@@ -9,7 +8,24 @@
         "title": "Name",
         "type": "string",
         "required": true,
-        "default": "Example Dynamic Platform"
+        "default": "Receiver"
+      },
+      "path": {
+        "title": "Path",
+        "type": "String",
+        "default": "/dev/ttyS0",
+        "required": true
+      },
+      "maxVolume": {
+        "type": "integer",
+        "default": 60,
+        "required": true
+      },
+      "minVolume": {
+        "title": "Minimum Volume",
+        "type": "integer",
+        "default": 0,
+        "required": true
       }
     }
   }
